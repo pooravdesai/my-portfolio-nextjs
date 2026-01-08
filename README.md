@@ -1,28 +1,29 @@
-# Portfolio Website with Next.js and Sass
+# My Portfolio Website
 
-This repository contains the source code for a portfolio website built using Next.js and Sass. This README.md file provides an overview of the project and instructions on how to set it up and customize it for your own use.
+A modern, responsive portfolio website built with **Next.js**, **Sass**, and **TailwindCSS**.
 
-[![Stars](https://img.shields.io/github/stars/nixrajput/portfolio-nextjs?label=Stars&style=flat)][repo]
-[![Forks](https://img.shields.io/github/forks/nixrajput/portfolio-nextjs?label=Forks&style=flat)][repo]
-[![Watchers](https://img.shields.io/github/watchers/nixrajput/portfolio-nextjs?label=Watchers&style=flat)][repo]
-[![Contributors](https://img.shields.io/github/contributors/nixrajput/portfolio-nextjs?label=Contributors&style=flat)][repo]
+> This project is based on the [portfolio-nextjs](https://github.com/nixrajput/portfolio-nextjs) template by [nixrajput](https://github.com/nixrajput).
 
-[![GitHub last commit](https://img.shields.io/github/last-commit/nixrajput/portfolio-nextjs?label=Last+Commit&style=flat)][repo]
-[![GitHub issues](https://img.shields.io/github/issues/nixrajput/portfolio-nextjs?label=Issues&style=flat)][issues]
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/nixrajput/portfolio-nextjs?label=Pull+Requests&style=flat)][pulls]
-[![GitHub License](https://img.shields.io/github/license/nixrajput/portfolio-nextjs?label=License&style=flat)][license]
+[![GitHub last commit](https://img.shields.io/github/last-commit/poorav/my-portfolio-nextjs?label=Last+Commit&style=flat)][repo]
+[![GitHub License](https://img.shields.io/github/license/poorav/my-portfolio-nextjs?label=License&style=flat)][license]
 
-## Table of Contents
+## Tech Stack
 
-- [Portfolio Website with Next.js and Sass](#portfolio-website-with-nextjs-and-sass)
-  - [Table of Contents](#table-of-contents)
-  - [Features](#features)
-  - [Screenshots](#screenshots)
-  - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-  - [Usage](#usage)
-  - [Customization](#customization)
+- **Framework**: Next.js 14+ with App Router
+- **Styling**: SCSS, TailwindCSS, CSS Modules
+- **Animations**: Framer Motion, Custom animations
+- **Icons**: FontAwesome
+- **Error Tracking**: Sentry
+- *Tech Stack](#tech-stack)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Customization](#customization)
+- [Deployment](#deployment)
+- [License](#license)
+- [Acknowledgments](#acknowledgments
     - [Changing Content](#changing-content)
   - [Deployment](#deployment)
   - [Contributing](#contributing)
@@ -74,16 +75,16 @@ You need to have the following software installed on your computer:
    If you're using npm:
 
    ```bash
-   npm install
-   ```
-
-   If you're using pnpm:
+   npm install:
 
    ```bash
-   pnpm install
+   git clone https://github.com/yourusername/my-portfolio-nextjs.git
    ```
 
-   If you're using Yarn:
+3. Navigate to the project directory:
+
+   ```bash
+   cd my-you're using Yarn:
 
    ```bash
    yarn install
@@ -126,49 +127,32 @@ To deploy the portfolio website to a hosting service of your choice, follow the 
 Remember to configure environment variables for sensitive information like email credentials if needed.
 
 ## Contributing
+To customize the portfolio with your own information:
 
-If you would like to contribute to this project, feel free to fork the repository, make your changes, and submit a pull request. Please follow the guidelines in the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+1. **Update Personal Data**:
+   - Edit `src/constants/strings.ts` for personal information
+   - Update `src/data/projects.ts` to showcase your projects
+   - Modify `src/data/experiences.ts` with your work experience
+   - Update `src/data/skills.ts` with your technical skills
+   - Edit `src/data/services.ts` for services you offer
+   - Update `src/data/socialLinks.ts` with your social media
 
-## License
+2. **Update Images**:
+   - Replace the profile picture at `public/images/profile.jpg`
+ This project is optimized for deployment on [Vercel](https://vercel.com), which is the recommended platform for Next.js applications.
+
+### Deploy to Vercel
+
+1. License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Sponsor Me
+## Acknowledgments
 
-By sponsoring my efforts, you're not merely contributing to the development of my projects; you're investing in its growth and sustainability.
+This project is built upon the excellent [portfolio-nextjs](https://github.com/nixrajput/portfolio-nextjs) template by [nixrajput](https://github.com/nixrajput). Thanks to the original author for creating such a solid foundation for building modern portfolio websites.
 
-Your support empowers me to dedicate more time and resources to improving the project's features, addressing issues, and ensuring its continued relevance in the rapidly evolving landscape of technology.
+---
 
-Your sponsorship directly fuels innovation, fosters a vibrant community, and helps maintain the project's high standards of quality. Together, we can shape the future of the projects and make a lasting impact in the open-source community.
+[repo]: https://github.com/poorav/my-portfolio-nextjs
+[license]: https://github.com/poorav/my-portfolio-nextjs/blob/master/LICENSE
 
-Thank you for considering sponsoring my work!
-
-[![Sponsor](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/nixrajput)
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/nixrajput)
-
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/nixrajput)
-
-## Connect With Me
-
-[![GitHub: nixrajput](https://img.shields.io/badge/nixrajput-EFF7F6?logo=GitHub&logoColor=333&link=https://www.github.com/nixrajput)][github]
-[![Linkedin: nixrajput](https://img.shields.io/badge/nixrajput-EFF7F6?logo=LinkedIn&logoColor=blue&link=https://www.linkedin.com/in/nixrajput)][linkedin]
-[![Instagram: nixrajput](https://img.shields.io/badge/nixrajput-EFF7F6?logo=Instagram&link=https://www.instagram.com/nixrajput)][instagram]
-[![Twitter: nixrajput07](https://img.shields.io/badge/nixrajput-EFF7F6?logo=X&logoColor=333&link=https://x.com/nixrajput)][twitter]
-[![Telegram: nixrajput](https://img.shields.io/badge/nixrajput-EFF7F6?logo=Telegram&link=https://telegram.me/nixrajput)][telegram]
-[![Gmail: nkr.nikhi.nkr@gmail.com](https://img.shields.io/badge/nkr.nikhil.nkr@gmail.com-EFF7F6?logo=Gmail&link=mailto:nkr.nikhil.nkr@gmail.com)][gmail]
-
-## Activities
-
-![Alt](https://repobeats.axiom.co/api/embed/39717929794c9e56c46a4313ee2c33347cf209d1.svg "Repobeats analytics image")
-
-[github]: https://github.com/nixrajput
-[twitter]: https://twitter.com/nixrajput07
-[instagram]: https://instagram.com/nixrajput
-[linkedin]: https://linkedin.com/in/nixrajput
-[telegram]: https://telegram.me/nixrajput
-[gmail]: mailto:nkr.nikhil.nkr@gmail.com
-[repo]: https://github.com/nixrajput/portfolio-nextjs
-[issues]: https://github.com/nixrajput/portfolio-nextjs/issues
-[pulls]: https://github.com/nixrajput/portfolio-nextjs/pulls
-[license]: https://github.com/nixrajput/portfolio-nextjs/blob/master/LICENSE.md
