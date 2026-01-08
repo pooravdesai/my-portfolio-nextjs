@@ -38,3 +38,18 @@ next-env.d.ts
 package-lock.json
 pnpm-lock.yaml
 yarn.lock
+
+# Python virtual environment
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+*~
+.project
+.pydevproject

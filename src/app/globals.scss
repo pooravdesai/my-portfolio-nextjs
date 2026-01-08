@@ -21,6 +21,57 @@
     scrollbar-width: none;
     /* Firefox */
   }
+
+  /* Professional gradient backgrounds */
+  .bg-gradient-professional {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        circle at 20% 50%,
+        rgba(0, 155, 110, 0.08) 0%,
+        rgba(0, 200, 140, 0.03) 25%,
+        transparent 65%
+      ),
+      radial-gradient(
+        circle at 80% 80%,
+        rgba(0, 155, 110, 0.05) 0%,
+        transparent 60%
+      ),
+      linear-gradient(
+        135deg,
+        transparent 0%,
+        rgba(0, 155, 110, 0.02) 50%,
+        transparent 100%
+      );
+      pointer-events: none;
+      z-index: 1;
+    }
+  }
+
+  [data-theme="dark"] .bg-gradient-professional::before {
+    background: radial-gradient(
+      circle at 20% 50%,
+      rgba(0, 177, 113, 0.08) 0%,
+      rgba(0, 237, 138, 0.03) 25%,
+      transparent 65%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(0, 177, 113, 0.05) 0%,
+      transparent 60%
+    ),
+    linear-gradient(
+      135deg,
+      transparent 0%,
+      rgba(0, 177, 113, 0.02) 50%,
+      transparent 100%
+    );
+  }
 }
 
 :root {
@@ -189,6 +240,135 @@
     4px 0px 12px -6px rgba(0, 0, 0, 0.1);
 
   --navBarShadow: 0 0 10px 0 var(--blackColor10);
+}
+
+/* Dark Theme (default) - Keep existing dark colors */
+[data-theme="dark"] {
+  --dialogColor10: rgba(18, 22, 27, 0.1);
+  --dialogColor20: rgba(18, 22, 27, 0.2);
+  --dialogColor30: rgba(18, 22, 27, 0.3);
+  --dialogColor40: rgba(18, 22, 27, 0.4);
+  --dialogColor50: rgba(18, 22, 27, 0.5);
+  --dialogColor60: rgba(18, 22, 27, 0.6);
+  --dialogColor70: rgba(18, 22, 27, 0.7);
+  --dialogColor80: rgba(18, 22, 27, 0.8);
+  --dialogColor90: rgba(18, 22, 27, 0.9);
+  --dialogColor100: rgba(18, 22, 27, 1);
+  --dialogColor: rgb(18, 22, 27);
+
+  --bgColor10: rgba(10, 13, 15, 0.1);
+  --bgColor20: rgba(10, 13, 15, 0.2);
+  --bgColor30: rgba(10, 13, 15, 0.3);
+  --bgColor40: rgba(10, 13, 15, 0.4);
+  --bgColor50: rgba(10, 13, 15, 0.5);
+  --bgColor60: rgba(10, 13, 15, 0.6);
+  --bgColor70: rgba(10, 13, 15, 0.7);
+  --bgColor80: rgba(10, 13, 15, 0.8);
+  --bgColor90: rgba(10, 13, 15, 0.9);
+  --bgColor: rgba(10, 13, 15, 1);
+
+  --textColor10: rgba(248, 248, 248, 0.1);
+  --textColor20: rgba(248, 248, 248, 0.2);
+  --textColor30: rgba(248, 248, 248, 0.3);
+  --textColor40: rgba(248, 248, 248, 0.4);
+  --textColor50: rgba(248, 248, 248, 0.5);
+  --textColor60: rgba(248, 248, 248, 0.6);
+  --textColor70: rgba(248, 248, 248, 0.7);
+  --textColor80: rgba(248, 248, 248, 0.8);
+  --textColor90: rgba(248, 248, 248, 0.9);
+  --textColor100: rgba(248, 248, 248, 1);
+  --textColor: rgba(248, 248, 248, 1);
+
+  --textColorLight10: rgba(180, 180, 180, 0.1);
+  --textColorLight20: rgba(180, 180, 180, 0.2);
+  --textColorLight30: rgba(180, 180, 180, 0.3);
+  --textColorLight40: rgba(180, 180, 180, 0.4);
+  --textColorLight50: rgba(180, 180, 180, 0.5);
+  --textColorLight60: rgba(180, 180, 180, 0.6);
+  --textColorLight70: rgba(180, 180, 180, 0.7);
+  --textColorLight80: rgba(180, 180, 180, 0.8);
+  --textColorLight90: rgba(180, 180, 180, 0.9);
+  --textColorLight100: rgba(180, 180, 180, 1);
+  --textColorLight: rgba(180, 180, 180, 1);
+}
+
+/* Light Theme Override */
+:root:not([data-theme="dark"]) {
+  --dialogColor10: rgba(240, 242, 245, 0.1);
+  --dialogColor20: rgba(240, 242, 245, 0.2);
+  --dialogColor30: rgba(240, 242, 245, 0.3);
+  --dialogColor40: rgba(240, 242, 245, 0.4);
+  --dialogColor50: rgba(240, 242, 245, 0.5);
+  --dialogColor60: rgba(240, 242, 245, 0.6);
+  --dialogColor70: rgba(240, 242, 245, 0.7);
+  --dialogColor80: rgba(240, 242, 245, 0.8);
+  --dialogColor90: rgba(240, 242, 245, 0.9);
+  --dialogColor100: rgba(240, 242, 245, 1);
+  --dialogColor: rgb(240, 242, 245);
+
+  --bgColor10: rgba(252, 253, 254, 0.1);
+  --bgColor20: rgba(252, 253, 254, 0.2);
+  --bgColor30: rgba(252, 253, 254, 0.3);
+  --bgColor40: rgba(252, 253, 254, 0.4);
+  --bgColor50: rgba(252, 253, 254, 0.5);
+  --bgColor60: rgba(252, 253, 254, 0.6);
+  --bgColor70: rgba(252, 253, 254, 0.7);
+  --bgColor80: rgba(252, 253, 254, 0.8);
+  --bgColor90: rgba(252, 253, 254, 0.9);
+  --bgColor: rgba(252, 253, 254, 1);
+
+  --textColor10: rgba(30, 30, 30, 0.1);
+  --textColor20: rgba(30, 30, 30, 0.2);
+  --textColor30: rgba(30, 30, 30, 0.3);
+  --textColor40: rgba(30, 30, 30, 0.4);
+  --textColor50: rgba(30, 30, 30, 0.5);
+  --textColor60: rgba(30, 30, 30, 0.6);
+  --textColor70: rgba(30, 30, 30, 0.7);
+  --textColor80: rgba(30, 30, 30, 0.8);
+  --textColor90: rgba(30, 30, 30, 0.9);
+  --textColor100: rgba(30, 30, 30, 1);
+  --textColor: rgba(30, 30, 30, 1);
+
+  --textColorLight10: rgba(100, 100, 100, 0.1);
+  --textColorLight20: rgba(100, 100, 100, 0.2);
+  --textColorLight30: rgba(100, 100, 100, 0.3);
+  --textColorLight40: rgba(100, 100, 100, 0.4);
+  --textColorLight50: rgba(100, 100, 100, 0.5);
+  --textColorLight60: rgba(100, 100, 100, 0.6);
+  --textColorLight70: rgba(100, 100, 100, 0.7);
+  --textColorLight80: rgba(100, 100, 100, 0.8);
+  --textColorLight90: rgba(100, 100, 100, 0.9);
+  --textColorLight100: rgba(100, 100, 100, 1);
+  --textColorLight: rgba(100, 100, 100, 1);
+
+  --primaryColor: rgba(0, 155, 110, 1);
+  --primaryColor5: rgba(0, 155, 110, 0.05);
+  --primaryColor10: rgba(0, 155, 110, 0.1);
+  --primaryColor20: rgba(0, 155, 110, 0.2);
+  --primaryColor30: rgba(0, 155, 110, 0.3);
+  --primaryColor40: rgba(0, 155, 110, 0.4);
+  --primaryColor50: rgba(0, 155, 110, 0.5);
+  --primaryColor60: rgba(0, 155, 110, 0.6);
+  --primaryColor70: rgba(0, 155, 110, 0.7);
+  --primaryColor80: rgba(0, 155, 110, 0.8);
+  --primaryColor90: rgba(0, 155, 110, 0.9);
+  --primaryColor100: rgba(0, 155, 110, 1);
+
+  --secondaryColor10: rgba(0, 200, 140, 0.1);
+  --secondaryColor20: rgba(0, 200, 140, 0.2);
+  --secondaryColor30: rgba(0, 200, 140, 0.3);
+  --secondaryColor40: rgba(0, 200, 140, 0.4);
+  --secondaryColor50: rgba(0, 200, 140, 0.5);
+  --secondaryColor60: rgba(0, 200, 140, 0.6);
+  --secondaryColor70: rgba(0, 200, 140, 0.7);
+  --secondaryColor80: rgba(0, 200, 140, 0.8);
+  --secondaryColor90: rgba(0, 200, 140, 0.9);
+  --secondaryColor100: rgba(0, 200, 140, 1);
+  --secondaryColor: rgba(0, 200, 140, 1);
+
+  --borderColor: rgba(220, 220, 220, 1);
+  --lightGrayColor: #e8e8e8;
+  --lighterGrayColor: #f0f0f0;
 }
 
 * {

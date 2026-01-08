@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
 import { navMenus } from "@/data/navMenus";
+import { ThemeProvider } from "@/context/ThemeContext";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -25,9 +26,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Nikhil Rajput",
+  title: "Poorav Desai",
   description:
-    "Nikhil Rajput is a proficient Software Engineer and Full Stack Developer from India, skilled in front-end and back-end development using modern tech stacks.",
+    "Poorav Desai is a proficient Software Engineer and Full Stack Developer.",
   robots: {
     index: true,
     follow: true,
@@ -41,41 +42,43 @@ export const metadata: Metadata = {
   },
   icons: [
     {
-      url: "/favicon-16x16.ico",
+      url: "/favicon_io_1/favicon.ico",
       rel: "icon",
       sizes: "16x16",
       type: "image/x-icon",
     },
     {
-      url: "/favicon-32x32.ico",
+      url: "/favicon_io_1/favicon.ico",
       rel: "icon",
       sizes: "32x32",
       type: "image/x-icon",
     },
     {
-      url: "/favicon-48x48.ico",
+      url: "/favicon_io_1/favicon.ico",
       rel: "icon",
       sizes: "48x48",
       type: "image/x-icon",
     },
     {
-      url: "/favicon-64x64.ico",
+      url: "/favicon_io_work/favicon.ico",
       rel: "icon",
       sizes: "64x64",
       type: "image/x-icon",
     },
   ],
   keywords: [
-    "nikhil rajput",
-    "nikhil",
-    "nixrajput",
-    "nikhil-rajput",
-    "rajput nikhil",
-    "founder of nixlab",
-    "nixlab founder",
+    "poorav desai",
+    "poorav",
+    "pooravdesai",
+    "poorav-desai",
+    "desai poorav",
+    "software engineer",
     "full stack developer",
-    "indian developer",
-    "nixrajput github",
+    "full stack engineer",
+    "ai developer",
+    "machine learning engineer",
+    "web developer",
+    "pooravdesai github",
   ],
 };
 
@@ -100,9 +103,11 @@ const RootLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
 
       <body className={isDebug ? "debug-screens" : ""}>
         {isDebug ? <WebVitals /> : null}
-        <FloatingNavbar className="app_nav" navItems={navMenus} />
-        <main>{children}</main>
-        <ScrollToTop />
+        <ThemeProvider>
+          <FloatingNavbar className="app_nav" navItems={navMenus} />
+          <main>{children}</main>
+          <ScrollToTop />
+        </ThemeProvider>
       </body>
     </html>
   );

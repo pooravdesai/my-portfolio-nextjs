@@ -5,11 +5,12 @@ import Column from "@/components/core/Column";
 import SectionTitle from "@/components/common/SectionTitle";
 import SocialButton from "./ui/SocialButton";
 import socialLinks from "@/data/socialLinks";
+import Strings from "@/constants/strings";
 
 const HomeSection6 = ({ id }: { id: string }) => {
   return (
     <ResponsiveBox
-      classNames="dark:bg-[var(--dialogColor)] bg-[var(--dialogColor)] min-h-screen items-center justify-center dark:bg-dot-white/[0.15] bg-dot-white/[0.15] items-center justify-center"
+      classNames="dark:bg-[var(--dialogColor)] bg-[var(--dialogColor)] min-h-screen items-center justify-center bg-gradient-professional"
       id={id}
     >
       <ConstrainedBox classNames="p-4 py-16">
@@ -17,7 +18,11 @@ const HomeSection6 = ({ id }: { id: string }) => {
 
         <Column classNames="mt-16 w-full">
           <GridBox classNames="sm:grid-cols-2 w-full mx-auto gap-4">
-            {socialLinks.map((link, index) => {
+            {socialLinks
+              .filter((link) =>
+                link.name && [Strings.github, Strings.linkedIn, Strings.email, Strings.instagram].includes(link.name)
+              )
+              .map((link, index) => {
               return (
                 <SocialButton
                   key={`social-link-${index}`}
@@ -32,7 +37,7 @@ const HomeSection6 = ({ id }: { id: string }) => {
           <p className="text-center mx-auto mt-16 text-2xl/6 font-semibold">
             I&apos;m{" "}
             <span className="text-[var(--primaryColor)]">available</span> for
-            freelancing.
+            Hire.
           </p>
         </Column>
       </ConstrainedBox>
