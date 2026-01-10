@@ -13,7 +13,7 @@ import Strings from "@/constants/strings";
 const HomeSection1 = ({ id }: Readonly<{ id: string }>) => {
   return (
     <ResponsiveBox
-      classNames="dark:bg-[var(--bgColor)] bg-[var(--bgColor)] dark:bg-grid-white/[0.1] bg-grid-white/[0.1] min-h-screen items-center justify-center relative overflow-hidden rounded-md"
+      classNames="dark:bg-[var(--bgColor)] bg-[var(--bgColor)] min-h-screen items-center justify-center relative overflow-hidden rounded-md"
       id={id}
     >
       <ConstrainedBox classNames="px-4 py-8 pt-32 z-20 items-center justify-center">
@@ -28,8 +28,9 @@ const HomeSection1 = ({ id }: Readonly<{ id: string }>) => {
               className="text-2xl/normal sm:text-3xl/normal md:text-5xl/normal lg:text-6xl/normal xl:text-7xl/normal dark:text-[var(--primaryColor)] text-[var(--primaryColor)] font-bold text-center"
             />
           </div>
-          <p className="text-sm/normal md:text-base/normal dark:text-[var(--textColorLight)] text-[var(--textColorLight)]">
-            Full Stack AI Developer 💻 SDE 🛠️
+          <p className="text-sm/normal md:text-base/normal dark:text-[var(--textColorLight)] text-[var(--textColorLight)] text-center">
+            <span>Software Engineer | Cloud & AI Systems</span>
+            <span className="block mt-2">Building scalable, reliable products with end-to-end ownership</span>
           </p>
 
           <div className="gap-4 mt-12 lg:mt-16 flex flex-col md:flex-row">
