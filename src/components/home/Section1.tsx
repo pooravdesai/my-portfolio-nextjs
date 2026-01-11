@@ -16,10 +16,10 @@ const HomeSection1 = ({ id }: Readonly<{ id: string }>) => {
       classNames="dark:bg-[var(--bgColor)] bg-[var(--bgColor)] min-h-screen items-center justify-center relative overflow-hidden rounded-md"
       id={id}
     >
-      <ConstrainedBox classNames="px-4 py-8 pt-32 z-20 items-center justify-center">
+      <ConstrainedBox classNames="px-4 py-4 sm:py-8 pt-16 sm:pt-28 z-20 items-center justify-center">
         <Column classNames="w-full items-center justify-center">
           <ProfilePicture />
-          <div className="inline-flex items-center">
+          <div className="flex flex-wrap items-center justify-center">
             <p className="text-2xl/normal sm:text-3xl/normal md:text-5xl/normal lg:text-6xl/normal xl:text-7xl/normal dark:text-[var(--textColor)] text-[var(--textColor)] font-bold text-center">
               Hi there, I am
             </p>
@@ -28,21 +28,27 @@ const HomeSection1 = ({ id }: Readonly<{ id: string }>) => {
               className="text-2xl/normal sm:text-3xl/normal md:text-5xl/normal lg:text-6xl/normal xl:text-7xl/normal dark:text-[var(--primaryColor)] text-[var(--primaryColor)] font-bold text-center"
             />
           </div>
-          <p className="text-sm/normal md:text-base/normal dark:text-[var(--textColorLight)] text-[var(--textColorLight)] text-center">
+          <p className="text-sm/normal md:text-base/normal lg:text-lg dark:text-[var(--textColorLight)] text-[var(--textColorLight)] text-center font-semibold">
             <span>Software Engineer | Cloud & AI Systems</span>
-            <span className="block mt-2">Building scalable, reliable products with end-to-end ownership</span>
+            <span className="block mt-2">Building scalable and reliable products with end-to-end ownership</span>
           </p>
 
-          <div className="gap-4 mt-12 lg:mt-16 flex flex-col md:flex-row">
+          {/* <div className="gap-4 mt-12 lg:mt-16 flex flex-col md:flex-row">
             <TalkButton />
-          </div>
+          </div> */}
         </Column>
 
-        <div className="mt-12 lg:mt-16 w-full flex flex-col items-center">
+        <div className="mt-8 lg:mt-12 w-full flex flex-col items-center">
           <p className="text-base/6 font-medium">Let's connect</p>
 
           <Row classNames="mt-2 gap-2">
-            {socialLinks.slice(0, 5).map((link, index) => {
+            {socialLinks
+              .filter((link) => link.name && ["LinkedIn", "GitHub", "Email"].includes(link.name))
+              .sort((a, b) => {
+                const order = ["LinkedIn", "GitHub", "Email"];
+                return order.indexOf(a.name || "") - order.indexOf(b.name || "");
+              })
+              .map((link, index) => {
               return (
                 <Link
                   key={`social-link-${index}`}
