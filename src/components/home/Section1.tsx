@@ -28,7 +28,7 @@ const HomeSection1 = ({ id }: Readonly<{ id: string }>) => {
               className="text-2xl/normal sm:text-3xl/normal md:text-5xl/normal lg:text-6xl/normal xl:text-7xl/normal dark:text-[var(--primaryColor)] text-[var(--primaryColor)] font-bold text-center"
             />
           </div>
-          <p className="text-sm/normal md:text-base/normal lg:text-lg dark:text-[var(--textColorLight)] text-[var(--textColorLight)] text-center font-semibold">
+          <p className="text-base/normal md:text-lg/normal lg:text-xl dark:text-[var(--textColorLight)] text-[var(--textColorLight)] text-center font-semibold">
             <span>Software Engineer | Cloud & AI Systems</span>
             <span className="block mt-2">Building scalable and reliable products with end-to-end ownership</span>
           </p>
@@ -38,7 +38,7 @@ const HomeSection1 = ({ id }: Readonly<{ id: string }>) => {
           </div> */}
         </Column>
 
-        <div className="mt-8 lg:mt-12 w-full flex flex-col items-center">
+        <div className="mt-8 lg:mt-8 w-full flex flex-col items-center">
           <p className="text-base/6 font-medium">Let's connect</p>
 
           <Row classNames="mt-2 gap-2">
