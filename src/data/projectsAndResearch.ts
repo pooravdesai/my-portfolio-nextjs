@@ -36,7 +36,7 @@ const projectsAndResearch: ProjectAndResearch[] = [
       "HuggingFace",
     ],
     highlights: [
-      "Published at AAAI, proposing a novel NLP task to generate natural-language explanations that reveal the intended sarcasm in multimodal social media posts (image + text)",
+      "Proposing a novel NLP task to generate natural-language explanations that reveal the intended sarcasm in multimodal social media posts (image + text)",
       "Designed and fine-tuned a multimodal Transformer-based architecture combining visual and textual representations, leveraging VGG-19 for image features and BART for text encoding and generation",
       "Implemented training and evaluation pipelines using PyTorch and HuggingFace, with data processing via NumPy and Pandas",
     ],
