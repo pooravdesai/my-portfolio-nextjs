@@ -8,28 +8,34 @@ import {
   faLaptopCode,
   faEnvelope,
   faFile,
+  faHandshake,
 } from "@fortawesome/free-solid-svg-icons";
 
 export const navMenus: INavItem[] = [
-  // {
-  //   name: "Home",
-  //   link: "/#hero",
-  //   icon: faHome,
-  // },
+  {
+    name: "Home",
+    link: "/#home",
+    icon: faHome,
+  },
   {
     name: "About",
-    link: "/",
+    link: "/#about",
     icon: faUser,
   },
-  {
-    name: "Services",
-    link: "/#services",
-    icon: faBriefcase,
-  },
+  // {
+  //   name: "Services",
+  //   link: "/#services",
+  //   icon: faBriefcase,
+  // },
   {
     name: "Experiences",
     link: "/#experiences",
     icon: faTimeline,
+  },
+  {
+    name: "Projects",
+    link: "/#projects-research",
+    icon: faLaptopCode,
   },
   {
     name: "Skills",
@@ -37,9 +43,9 @@ export const navMenus: INavItem[] = [
     icon: faAward,
   },
   {
-    name: "Projects",
-    link: "/#projects",
-    icon: faLaptopCode,
+    name: "Leadership",
+    link: "/#leadership",
+    icon: faHandshake,
   },
   {
     name: "Contact",

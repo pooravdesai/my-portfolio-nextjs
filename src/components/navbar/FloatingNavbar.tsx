@@ -42,7 +42,7 @@ const FloatingNavbarContent = ({
           duration: 0.2,
         }}
         className={cn(
-          "flex w-fit fixed top-4 inset-x-0 mx-auto border border-white/[0.25] rounded-full bg-[var(--dialogColor50)] backdrop-blur-sm shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] px-4 py-3 items-center space-x-4",
+          "flex w-fit fixed top-0 inset-x-0 mx-auto border border-white/[0.25] rounded-full bg-[var(--dialogColor50)] backdrop-blur-sm shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] px-4 py-3 h-16 items-center space-x-4",
           className
         )}
       >
@@ -86,7 +86,7 @@ const FloatingNavbarContent = ({
             duration: 0.2,
           }}
           className={cn(
-            "flex w-fit fixed top-4 inset-x-0 mx-auto border border-white/[0.25] rounded-full bg-[var(--dialogColor50)] backdrop-blur-sm shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] px-4 py-3 items-center space-x-4",
+            "flex w-fit fixed top-0 inset-x-0 mx-auto border border-white/[0.25] rounded-full bg-[var(--dialogColor50)] backdrop-blur-sm shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] px-4 py-3 h-16 items-center space-x-4",
             className
           )}
         >
@@ -151,7 +151,7 @@ const FloatingNavbarContent = ({
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.2 }}
           className={cn(
-            "flex w-full fixed top-0 left-0 right-0 border-b border-white/[0.25] bg-[var(--dialogColor50)] backdrop-blur-sm shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1)] z-[5000] px-4 py-4 items-center justify-center",
+            "flex w-full fixed top-0 left-0 right-0 border-b border-white/[0.25] bg-[var(--dialogColor50)] backdrop-blur-sm shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1)] z-[5000] px-4 py-4 h-14 items-center justify-center",
             className
           )}
         >
@@ -202,6 +202,16 @@ const FloatingNavbarContent = ({
               />
             </motion.div>
           </button>
+
+          {/* Resume Button - Right */}
+          <div className="absolute right-4">
+            <Link
+              href="/resume"
+              className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-[var(--primaryColor)] text-white font-semibold transition-all duration-300 hover:bg-[var(--primaryColor)]/90 shadow-lg"
+            >
+              <span className="text-sm">Resume</span>
+            </Link>
+          </div>
         </motion.div>
       )}
 
@@ -213,7 +223,7 @@ const FloatingNavbarContent = ({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="fixed top-16 left-0 right-0 bg-[var(--dialogColor90)] backdrop-blur-sm border-b border-white/[0.25] z-[4999]"
+            className="fixed top-14 left-0 right-0 bg-[var(--dialogColor90)] backdrop-blur-sm border-b border-white/[0.25] z-[4999]"
           >
             <div className="flex flex-col items-center py-4 space-y-2 px-4">
               {navItems.map((navItem: INavItem, idx: number) => (

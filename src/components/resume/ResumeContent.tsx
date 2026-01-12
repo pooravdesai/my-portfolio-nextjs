@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
 import Column from "@/components/core/Column";
@@ -10,6 +10,17 @@ import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 const ResumeContent = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const handleDownload = () => {
     const link = document.createElement("a");
@@ -20,8 +31,12 @@ const ResumeContent = () => {
     document.body.removeChild(link);
   };
 
+  // Set zoom level: 75% for mobile, default for desktop
+  const zoomLevel = isMobile ? "zoom=50" : "zoom=100";
+  const pdfUrl = `/resume/PooravDesai_SDE_resume.pdf#toolbar=1&${zoomLevel}`;
+
   return (
-    <div className="w-full min-h-screen bg-[var(--bgColor)] py-8 md:py-16 pt-28 md:pt-32">
+    <div className="w-full min-h-screen bg-[var(--bgColor)] py-8 md:py-16">
       <ConstrainedBox classNames="px-4">
         <Column classNames="w-full items-center gap-6">
           {/* Header */}
@@ -64,7 +79,7 @@ const ResumeContent = () => {
             className="w-full max-w-4xl rounded-lg overflow-hidden shadow-2xl bg-white"
           >
             <iframe
-              src="/resume/PooravDesai_SDE_resume.pdf#toolbar=1"
+              src={pdfUrl}
               className="w-full h-[90vh] md:h-screen"
               title="Resume - PooravDesai_SDE_resume.pdf"
               onLoad={() => setIsLoading(false)}

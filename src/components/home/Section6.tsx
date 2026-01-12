@@ -13,7 +13,7 @@ const HomeSection6 = ({ id }: { id: string }) => {
       classNames="dark:bg-[var(--dialogColor)] bg-[var(--dialogColor)] min-h-screen items-center justify-center bg-gradient-professional"
       id={id}
     >
-      <ConstrainedBox classNames="p-4 py-16">
+      <ConstrainedBox classNames="p-4 py-8 sm:py-12">
         <SectionTitle>Get in Touch</SectionTitle>
 
         <Column classNames="mt-16 w-full">

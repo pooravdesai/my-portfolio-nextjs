@@ -11,7 +11,7 @@ const ProfilePicture = ({
       {/* Glow effect layer */}
       <div
         className={cn(
-          "absolute inset-0 rounded-full blur-xl opacity-60",
+          "absolute inset-0 rounded-full blur-md opacity-60",
           "bg-gradient-to-br from-[var(--primaryColor)] to-[var(--secondaryColor)]",
           "animate-pulse"
         )}

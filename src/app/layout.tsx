@@ -98,7 +98,7 @@ const isDebug = process.env.NODE_ENV === "development";
 
 const RootLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
   return (
-    <html lang="en" className={poppins.className}>
+    <html lang="en" className={`${poppins.className} scroll-pt-16 sm:scroll-pt-14`}>
       {isDebug ? null : <GoogleAnalytics />}
 
       <body className={isDebug ? "debug-screens" : ""}>

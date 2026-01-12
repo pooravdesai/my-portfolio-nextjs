@@ -12,7 +12,7 @@ const HomeAboutSection = ({ id }: Readonly<{ id: string }>) => {
       classNames="bg-[var(--dialogColor)] dark:bg-[var(--dialogColor)] min-h-screen items-center justify-center relative overflow-hidden"
       id={id}
     >
-      <ConstrainedBox classNames="px-4 py-16">
+      <ConstrainedBox classNames="px-4 py-8 sm:py-12">
         <Column classNames="w-full items-center justify-center">
           {/* Headline */}
           <SectionTitle>{aboutData.headline}</SectionTitle>

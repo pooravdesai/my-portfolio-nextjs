@@ -2,9 +2,23 @@ import type { IExperienceItem } from "@/types";
 import Column from "@/components/core/Column";
 import BulletedText from "@/components/common/bulleted-text";
 
-const ExperienceItem = ({ data }: { data: IExperienceItem }) => {
+const ExperienceItem = ({
+  data,
+  dateRange,
+}: {
+  data: IExperienceItem;
+  dateRange?: string;
+}) => {
   return (
     <Column classNames="justify-between w-full h-full gap-2">
+      {/* Mobile: Show date first on small screens */}
+      {dateRange && (
+        <p className="md:hidden text-sm font-semibold text-[var(--textColorLight)] mb-2">
+          {dateRange}
+        </p>
+      )}
+
+      {/* Role and Company - prominent on all devices */}
       <Column classNames="justify-start">
         <p className="text-lg/6 font-semibold">{data.designation}</p>
 
@@ -13,6 +27,7 @@ const ExperienceItem = ({ data }: { data: IExperienceItem }) => {
         </p>
       </Column>
 
+      {/* Bullets */}
       <div className="w-full flex flex-col gap-2 relative mt-0 md:mt-8">
         {data.description.map((desc, i) => {
           return (

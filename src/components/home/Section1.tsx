@@ -16,7 +16,7 @@ const HomeSection1 = ({ id }: Readonly<{ id: string }>) => {
       classNames="dark:bg-[var(--bgColor)] bg-[var(--bgColor)] min-h-screen items-center justify-center relative overflow-hidden rounded-md"
       id={id}
     >
-      <ConstrainedBox classNames="px-4 py-4 sm:py-8 pt-16 sm:pt-28 z-20 items-center justify-center">
+      <ConstrainedBox classNames="px-4 py-4 sm:py-8 z-20 items-center justify-center">
         <Column classNames="w-full items-center justify-center">
           <ProfilePicture />
           <div className="flex flex-wrap items-center justify-center">
