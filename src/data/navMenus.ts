@@ -28,7 +28,7 @@ export const navMenus: INavItem[] = [
   //   icon: faBriefcase,
   // },
   {
-    name: "Experiences",
+    name: "Experience",
     link: "/#experiences",
     icon: faTimeline,
   },
