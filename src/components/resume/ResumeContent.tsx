@@ -31,9 +31,9 @@ const ResumeContent = () => {
     document.body.removeChild(link);
   };
 
-  // Set zoom level: 75% for mobile, default for desktop
-  const zoomLevel = isMobile ? "zoom=50" : "zoom=100";
-  const pdfUrl = `/resume/PooravDesai_SDE_resume.pdf#toolbar=1&${zoomLevel}`;
+  // Fit page width on mobile, default zoom on desktop
+  const viewParam = isMobile ? "view=Fit" : "zoom=100";
+  const pdfUrl = `/resume/PooravDesai_SDE_resume.pdf#toolbar=1&${viewParam}`;
 
   return (
     <div className="w-full min-h-screen bg-[var(--bgColor)] py-8 md:py-16">
@@ -76,7 +76,7 @@ const ResumeContent = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="w-full max-w-4xl rounded-lg overflow-hidden shadow-2xl bg-white"
+            className="w-full max-w-full md:max-w-4xl rounded-lg overflow-hidden shadow-2xl bg-white"
           >
             <iframe
               src={pdfUrl}
