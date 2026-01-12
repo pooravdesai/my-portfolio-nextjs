@@ -16,19 +16,19 @@ const HomeSection1 = ({ id }: Readonly<{ id: string }>) => {
       classNames="dark:bg-[var(--bgColor)] bg-[var(--bgColor)] min-h-screen items-center justify-center relative overflow-hidden rounded-md"
       id={id}
     >
-      <ConstrainedBox classNames="px-4 py-4 sm:py-8 z-20 items-center justify-center">
+      <ConstrainedBox classNames="px-4 py-8 sm:py-12 pb-12 sm:pb-16 z-20 items-center justify-center">
         <Column classNames="w-full items-center justify-center">
           <ProfilePicture />
-          <div className="flex flex-wrap items-center justify-center">
-            <p className="text-2xl/normal sm:text-3xl/normal md:text-5xl/normal lg:text-6xl/normal xl:text-7xl/normal dark:text-[var(--textColor)] text-[var(--textColor)] font-bold text-center">
+          <div className="flex flex-wrap items-center justify-center mt-6 md:mt-8">
+            <p className="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-5xl dark:text-[var(--textColor)] text-[var(--textColor)] font-bold text-center">
               Hi there, I am
             </p>
             <FlipWords
               words={[Strings.fullName]}
-              className="text-2xl/normal sm:text-3xl/normal md:text-5xl/normal lg:text-6xl/normal xl:text-7xl/normal dark:text-[var(--primaryColor)] text-[var(--primaryColor)] font-bold text-center"
+              className="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-5xl dark:text-[var(--primaryColor)] text-[var(--primaryColor)] font-bold text-center"
             />
           </div>
-          <p className="text-base/normal md:text-lg/normal lg:text-xl dark:text-[var(--textColorLight)] text-[var(--textColorLight)] text-center font-semibold">
+          <p className="text-base/normal md:text-lg/normal lg:text-xl dark:text-[var(--textColorLight)] text-[var(--textColorLight)] text-center font-semibold mt-6 md:mt-8">
             <span>Software Engineer | Cloud & AI Systems</span>
             <span className="block mt-2">Building scalable and reliable products with end-to-end ownership</span>
           </p>
@@ -38,35 +38,34 @@ const HomeSection1 = ({ id }: Readonly<{ id: string }>) => {
           </div> */}
         </Column>
 
-        <div className="mt-8 lg:mt-8 w-full flex flex-col items-center">
-          <p className="text-base/6 font-medium">Let's connect</p>
-
-          <Row classNames="mt-2 gap-2">
-            {socialLinks
-              .filter((link) => link.name && ["LinkedIn", "GitHub", "Email"].includes(link.name))
-              .sort((a, b) => {
-                const order = ["LinkedIn", "GitHub", "Email"];
-                return order.indexOf(a.name || "") - order.indexOf(b.name || "");
-              })
-              .map((link, index) => {
-              return (
-                <Link
-                  key={`social-link-${index}`}
-                  href={link.url}
-                  target="_blank"
-                  className="app__outlined_btn !rounded-full !p-2 lg:!p-3 !aspect-square dark:!border-[var(--textColor)] !border-[var(--textColor)]"
-                  aria-label={`${link.name}`}
-                >
-                  <span className="text-base/6 dark:text-[var(--whiteColor)] text-[var(--textColor)]">
-                    {typeof link.icon === "string" ? null : (
-                      <FontAwesomeIcon icon={link.icon} />
-                    )}
-                  </span>
-                </Link>
-              );
-            })}
-          </Row>
-        </div>
+        <p className="text-sm md:text-base dark:text-[var(--textColor)] text-[var(--textColor)] mt-4 md:mt-6 font-medium">
+          Let&apos;s connect
+        </p>
+        <Row classNames="mt-0.5 gap-2">
+          {socialLinks
+            .filter((link) => link.name && ["LinkedIn", "GitHub", "Email"].includes(link.name))
+            .sort((a, b) => {
+              const order = ["LinkedIn", "GitHub", "Email"];
+              return order.indexOf(a.name || "") - order.indexOf(b.name || "");
+            })
+            .map((link, index) => {
+            return (
+              <Link
+                key={`social-link-${index}`}
+                href={link.url}
+                target="_blank"
+                className="app__outlined_btn !rounded-full !p-2 lg:!p-3 !aspect-square dark:!border-[var(--textColor)] !border-[var(--textColor)]"
+                aria-label={`${link.name}`}
+              >
+                <span className="text-base/6 dark:text-[var(--whiteColor)] text-[var(--textColor)]">
+                  {typeof link.icon === "string" ? null : (
+                    <FontAwesomeIcon icon={link.icon} />
+                  )}
+                </span>
+              </Link>
+            );
+          })}
+        </Row>
       </ConstrainedBox>
     </ResponsiveBox>
   );
