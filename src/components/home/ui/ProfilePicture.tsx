@@ -7,7 +7,7 @@ const ProfilePicture = ({
   className?: string;
 }>) => {
   return (
-    <div className={cn("relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-4 md:mb-6", className)}>
+    <div className={cn("relative w-48 h-48 sm:w-52 sm:h-52 md:w-48 md:h-48 lg:w-56 lg:h-56", className)}>
       {/* Glow effect layer */}
       <div
         className={cn(
