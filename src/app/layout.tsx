@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "Poorav Desai Portfolio",
     images: [
       {
-        url: "https://pooravdesai.com/og-image.png",
+        url: "https://pooravdesai.com/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Poorav Desai Portfolio",
