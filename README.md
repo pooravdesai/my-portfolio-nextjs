@@ -2,7 +2,7 @@
 
 My personal portfolio website showcasing my work as a Software Engineer specializing in Cloud & AI Systems. Built with modern web technologies to deliver a fast, responsive, and visually engaging experience.
 
-**Live Site:** [Coming Soon]
+**Live Site:** [pooravdesai.com](pooravdesai.com)
 
 ## Tech Stack
 
