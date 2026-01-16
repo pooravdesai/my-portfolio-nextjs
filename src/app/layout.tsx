@@ -26,9 +26,25 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Poorav Desai",
+  title: "Poorav Desai | Software Engineer",
   description:
-    "Poorav Desai is a proficient Software Engineer and Full Stack Developer.",
+    "Software engineer building full-stack and AI-enabled products. View my projects, experience, leadership, and involvement.",
+  openGraph: {
+    title: "Poorav Desai | Software Engineer",
+    description:
+      "Projects, experience, leadership, and involvement. Built with Next.js.",
+    url: "https://pooravdesai.com",
+    siteName: "Poorav Desai Portfolio",
+    images: [
+      {
+        url: "https://pooravdesai.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Poorav Desai Portfolio",
+      },
+    ],
+    type: "website",
+  },
   robots: {
     index: true,
     follow: true,
