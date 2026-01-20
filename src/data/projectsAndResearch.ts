@@ -58,7 +58,7 @@ const projectsAndResearch: ProjectAndResearch[] = [
     title: "DocuChat",
     type: "production",
     tagline: "Production-Grade RAG-Based Document Chat System",
-    timeline: "Nov 2025 – Jan 2025",
+    timeline: "Dec 2025 – Jan 2026",
     description:
       "Scalable RAG pipeline enabling low-latency conversational AI over private documents with modular, fault-tolerant architecture.",
     technologies: [
